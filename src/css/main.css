@@ -1,0 +1,304 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #f6f8fd;
+    --secondary-color: #dc3545;
+    --color-text: #231942;
+    --navbar-color: #ffffff;
+    --navbar-color-text: #000000;
+}
+
+/*STYLE NAVBAR*/
+.navbar {
+    position: fixed;
+    padding: 15px 0 15px 0px;
+    width: 100%;
+    transition: all .2s ease;
+    --webkit-transition: all .2s;
+    --moz-transition: all .2s;
+    --ms-transition: all .2s;
+    --o-transition: all .2s;
+    z-index: 9999;
+}
+
+.navbar.color-active {
+    background-color: var(--navbar-color);
+    padding: 20px 0 20px 0;
+    border-bottom: 2px solid #dc354638;
+}
+
+.navbar .nav-link a{
+    padding: 5px 10px 5px 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--navbar-color-text);
+}
+
+.navbar .nav-link a:hover {
+    color: var(--secondary-color);
+}
+.navbar .nav-link .active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.navbar .nav-link .active:hover {
+    color: var(--navbar-color);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse{
+        background-color: var(--primary-color);
+    }
+}
+/*STYLE NAVBAR*/
+
+/*STYLE HOMEPAGE HEADER*/
+header {
+    background: #c6ffdd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f7797d, #fbd786, #c6ffdd); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #C75B7A, #D9ABAB, #F4D9D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.homepage .header-box {
+    padding-top: 150px;
+}
+
+.homepage .header-box h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.homepage .header-box h1 span{
+    font-weight: 700;
+}
+
+.homepage .header-box p {
+    line-height: 2;
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+.homepage .header-box img {
+    width: 100%;
+}
+
+@media screen and (max-width: 992px){
+    .homepage .header-box {
+        padding-bottom: 8rem;
+    }
+
+    .homepage .header-box img {
+        width: 400px;
+        display: block;
+        margin-inline: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .homepage .header-box h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .homepage .header-box h1 {
+        font-size: 2.4rem;
+    }
+
+    .homepage .header-box p {
+        font-size: 14px;
+    }
+
+    .homepage .header-box img {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .homepage .header-box h1 {
+        font-size: 2rem;
+    }
+    .homepage .header-box p{
+        font-size: 12px;
+    }
+}
+/*HOMEPAGE HEADER*/
+
+
+/*STYLE HOMPAGE KELAS*/
+.homepage .kelas {
+    background-color: var(--primary-color);
+    padding-bottom: 100px;
+}
+.homepage .kelas .row:nth-child(1){
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.homepage .kelas .row:nth-child(1) h1,
+.homepage .kelas .row:nth-child(1) p{
+    --color-text: var(--secondary-color);
+}
+
+.homepage .kelas .row:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding-inline: 10px;
+}
+
+.homepage .kelas .row:nth-child(2) img{
+    height: 250px;
+}
+
+.homepage .kelas .row:nth-child(2) .col {
+    background-color: var(--primary-color);
+    padding: 0;
+}
+
+.homepage .kelas .row:nth-child(2) .star {
+    color: gold;
+}
+
+.homepage .kelas .row:nth-child(2) h5 {
+    color: var(--color-text);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.homepage .kelas .row:nth-child(3) {
+    padding-top: 100px;
+}
+/*STYLE HOMPAGE KELAS*/
+
+/*STYLE HOMEPAGE TESTIMONIAL*/
+.homepage .testimonial {
+    background-color: var(--primary-color);
+}
+.homepage .testimonial h1{
+    color: var(--color-text);
+}
+
+.homepage .testimonial .swiper {
+    width: 70%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.homepage .testimonial .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--bs-white);
+
+    /* Center slide text vertically */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.homepage .testimonial .swiper-slide:active {
+    cursor: grabbing;
+}
+
+.homepage .testimonial .swiper-slide .desc {
+    color: var(--color-text);
+    margin-bottom: 50px;
+    margin-right: 50px;
+    font-weight: 500;
+    text-align: start;
+}
+
+.homepage .testimonial .swiper-slide .people .people-desc {
+    padding-top: 20px;
+}
+
+.homepage .testimonial .swiper-slide .people h5,
+.homepage .testimonial .swiper-slide .people p{
+    color: var(--color-text);
+}
+.homepage .testimonial .swiper-slide .people h5 {
+    font-weight: 600;
+}
+.homepage .testimonial .swiper-slide .people p{
+    opacity: 50%;
+}
+
+.homepage .testimonial .swiper-slide .people img {
+    width: 80%;
+    border-radius: 100%;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .homepage .testimonial .swiper {
+        padding-inline: 10px;
+    }
+    .homepage .testimonial .swiper-slide {
+        flex-direction: column;
+    }
+    .homepage .testimonial .swiper-slide .people img {
+        width: 20%;
+        align-items: start;
+    }
+    .homepage .testimonial .swiper-slide .people {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .homepage .testimonial .swiper-slide .people .people-desc {
+        font-size: 14px;
+    }
+
+    .homepage .testimonial .swiper-slide .people .people-desc h5,
+    .homepage .testimonial .swiper-slide .people .people-desc p{
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .homepage .testimonial .swiper-slide .desc {
+        font-weight: 200;
+        margin-right: 0;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+}
+/*STYLE HOMEPAGE TESTIMONIAL*/
+
+/*STYLE FAQ*/
+.faq {
+    background-color: var(--primary-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.faq h2 {
+    color: var(--color-text);
+}
+
+.faq .accordion .accordion-button {
+    color: var(--color-text);
+    font-weight: bold;
+    background-color: white;
+    line-height: 1.5;
+}
+
+.faq .accordion .accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.faq .accordion .accordion-body {
+    background-color: white;
+}
+/*STYLE FAQ*/
+
