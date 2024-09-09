@@ -21,6 +21,8 @@
     --ms-transition: all .2s;
     --o-transition: all .2s;
     z-index: 9999;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
 }
 
 .navbar.color-active {
@@ -29,7 +31,7 @@
     border-bottom: 2px solid #dc354638;
 }
 
-.navbar .nav-link a{
+.navbar .nav-link a {
     padding: 5px 10px 5px 15px;
     font-weight: 500;
     text-decoration: none;
@@ -39,6 +41,7 @@
 .navbar .nav-link a:hover {
     color: var(--secondary-color);
 }
+
 .navbar .nav-link .active {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -49,10 +52,11 @@
 }
 
 @media (max-width: 991px) {
-    .navbar-collapse{
+    .navbar-collapse {
         background-color: var(--primary-color);
     }
 }
+
 /*STYLE NAVBAR*/
 
 /*STYLE HOMEPAGE HEADER*/
@@ -66,13 +70,14 @@ header {
     padding-top: 150px;
 }
 
-.homepage .header-box h1{
+.homepage .header-box h1 {
     font-size: 3.2rem;
     font-weight: 600;
     color: var(--color-text);
+    --animate-delay: 0.6s;
 }
 
-.homepage .header-box h1 span{
+.homepage .header-box h1 span {
     font-weight: 700;
 }
 
@@ -80,13 +85,17 @@ header {
     line-height: 2;
     color: var(--color-text);
     font-weight: 400;
+    --animate-delay: 1s;
+}
+.homepage .header-box button {
+    --animate-delay: 1.4s;
 }
 
 .homepage .header-box img {
     width: 100%;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
     .homepage .header-box {
         padding-bottom: 8rem;
     }
@@ -122,10 +131,12 @@ header {
     .homepage .header-box h1 {
         font-size: 2rem;
     }
-    .homepage .header-box p{
+
+    .homepage .header-box p {
         font-size: 12px;
     }
 }
+
 /*HOMEPAGE HEADER*/
 
 
@@ -134,24 +145,25 @@ header {
     background-color: var(--primary-color);
     padding-bottom: 100px;
 }
-.homepage .kelas .row:nth-child(1){
+
+.homepage .kelas .row:nth-child(1) {
     padding-top: 150px;
     padding-bottom: 100px;
 }
 
 .homepage .kelas .row:nth-child(1) h1,
-.homepage .kelas .row:nth-child(1) p{
+.homepage .kelas .row:nth-child(1) p {
     --color-text: var(--secondary-color);
 }
 
-.homepage .kelas .row:nth-child(2){
+.homepage .kelas .row:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
     padding-inline: 10px;
 }
 
-.homepage .kelas .row:nth-child(2) img{
+.homepage .kelas .row:nth-child(2) img {
     height: 250px;
 }
 
@@ -173,13 +185,15 @@ header {
 .homepage .kelas .row:nth-child(3) {
     padding-top: 100px;
 }
+
 /*STYLE HOMPAGE KELAS*/
 
 /*STYLE HOMEPAGE TESTIMONIAL*/
 .homepage .testimonial {
     background-color: var(--primary-color);
 }
-.homepage .testimonial h1{
+
+.homepage .testimonial h1 {
     color: var(--color-text);
 }
 
@@ -219,13 +233,15 @@ header {
 }
 
 .homepage .testimonial .swiper-slide .people h5,
-.homepage .testimonial .swiper-slide .people p{
+.homepage .testimonial .swiper-slide .people p {
     color: var(--color-text);
 }
+
 .homepage .testimonial .swiper-slide .people h5 {
     font-weight: 600;
 }
-.homepage .testimonial .swiper-slide .people p{
+
+.homepage .testimonial .swiper-slide .people p {
     opacity: 50%;
 }
 
@@ -239,13 +255,16 @@ header {
     .homepage .testimonial .swiper {
         padding-inline: 10px;
     }
+
     .homepage .testimonial .swiper-slide {
         flex-direction: column;
     }
+
     .homepage .testimonial .swiper-slide .people img {
         width: 20%;
         align-items: start;
     }
+
     .homepage .testimonial .swiper-slide .people {
         display: flex;
         flex-direction: row;
@@ -253,12 +272,13 @@ header {
         justify-content: center;
         margin-bottom: 10px;
     }
+
     .homepage .testimonial .swiper-slide .people .people-desc {
         font-size: 14px;
     }
 
     .homepage .testimonial .swiper-slide .people .people-desc h5,
-    .homepage .testimonial .swiper-slide .people .people-desc p{
+    .homepage .testimonial .swiper-slide .people .people-desc p {
         padding-left: 20px;
         font-size: 14px;
     }
@@ -272,6 +292,7 @@ header {
     }
 
 }
+
 /*STYLE HOMEPAGE TESTIMONIAL*/
 
 /*STYLE FAQ*/
@@ -300,5 +321,205 @@ header {
 .faq .accordion .accordion-body {
     background-color: white;
 }
+
 /*STYLE FAQ*/
 
+
+/*STYLE KELAS*/
+.kelas-page .kelas {
+    background-color: var(--primary-color);
+    padding-bottom: 100px;
+}
+
+.kelas-page .kelas .row:nth-child(1) {
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.kelas-page .kelas .row:nth-child(1) h1,
+.kelas-page .kelas .row:nth-child(1) p {
+    color: var(--color-text);
+    --animate-delay: 1s;
+}
+
+.kelas-page .kelas {
+    background-color: var(--primary-color);
+    padding-bottom: 100px;
+}
+
+.kelas-page .kelas .row:nth-child(1) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+
+.kelas-page .kelas .row:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding-inline: 10px;
+}
+
+.kelas-page .kelas .row:nth-child(2) img {
+    height: 250px;
+}
+
+.kelas-page .kelas .row:nth-child(2) .col {
+    background-color: var(--primary-color);
+    padding: 0;
+}
+
+.kelas-page .kelas .row:nth-child(2) .star {
+    color: gold;
+}
+
+.kelas-page .kelas .row:nth-child(2) h5 {
+    color: var(--color-text);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/*STYLE KELAS*/
+
+
+/*STYLE TESTIMONIAL*/
+.testimonial-page .testimonial {
+    background-color: var(--primary-color);
+    padding-top: 150px;
+    padding-bottom: 100px;
+    column-gap: 5px;
+}
+
+.testimonial-page .testimonial .row:nth-child(1) h1,
+.testimonial-page .testimonial .row:nth-child(1) p{
+    color: var(--color-text);
+}
+
+.testimonial-page .testimonial .desc {
+    color: var(--color-text);
+    background-color: white;
+    font-weight: 500;
+    padding: 10px;
+
+    text-align: start;
+}
+
+.testimonial-page .testimonial .people {
+    display: flex;
+    padding: 10px;
+    justify-items: center;
+}
+
+.testimonial-page .testimonial .people h5,
+.testimonial-page .testimonial .people p {
+    color: var(--color-text);
+}
+
+.testimonial-page .testimonial .people h5 {
+    font-weight: 600;
+}
+
+.testimonial-page .testimonial .people p {
+    opacity: 50%;
+}
+
+.testimonial-page .testimonial .people img {
+    margin-right: 10px;
+    width: 20%;
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+}
+@media screen and (max-width: 992px) {
+    .testimonial-page .testimonial .people img {
+        width: 20%;
+    }
+}
+/*STYLE TESTIMONIAL*/
+
+/*SYARAT TNC*/
+.tnc-page .tnc {
+    padding-top: 150px;
+    background-color: var(--primary-color);
+}
+
+.tnc-page .tnc p{
+    line-height: 2;
+}
+/*SYARAT TNC*/
+
+/*STYLE FOOTER*/
+.footer-component {
+    width: 100%;
+    min-height: 60vh;
+}
+
+.footer-component .row:nth-child(1) .col:nth-child(1) h3 {
+    color: var(--color-text);
+}
+
+.footer-component .row:nth-child(1) .col:nth-child(1) .desc {
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-component .no a,
+.footer-component .email a {
+    display: flex;
+    align-items: center;
+    color: black;
+    column-gap: 5px;
+}
+
+.footer-component .no a:hover,
+.footer-component .email a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-component .row:nth-child(1) .col:nth-child(2) {
+    gap: 10px;
+}
+
+.footer-component .row:nth-child(1) .col:nth-child(2) a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-component .row:nth-child(1) .col:nth-child(2) a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-component .subscribe {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.footer-component .subscribe input {
+    width: 200px;
+    padding: 5px;
+}
+
+.footer-component .social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-component .social i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: all;
+}
+
+.footer-component .social i:hover {
+    color: var(--secondary-color);
+}
+
+.footer-component .row:nth-child(2) {
+    margin-top: 100px;
+}
+
+/*STYLE FOOTER*/

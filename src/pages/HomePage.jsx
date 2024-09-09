@@ -19,19 +19,26 @@ const HomePage = () => {
     let navigate = useNavigate();
     return (
         <div className={"homepage"}>
-            <header className={"w-100 min-vh-100 d-flex align-items-center"}>
+            <header className={"w-100 min-vh-100 d-flex align-items-center overflow-hidden"}>
                 <Container>
                     <Row className={'header-box d-flex align-items-center pt-lg-5'}>
                         <Col lg={'6'} className={'pt-lg-0 pt-6'}>
-                            <h1 className={'mb-4'}>Temukan <br/> <span>Bakat Kreatifmu</span> <br/> Bersama Kami!</h1>
-                            <p className={'mb-4'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
+                            <h1 className={'mb-4 animate__animated animate__fadeInUp animate__delay-1s'}>Temukan <br/>
+                                <span>Bakat Kreatifmu</span> <br/> Bersama Kami!</h1>
+                            <p className={'mb-4 animate__animated animate__fadeInUp animate__delay-1s'}>Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit. Autem
                                 delectus ex, harum illo libero omnis!</p>
-                            <button className={'btn btn-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2'}>Lihat Kelas</button>
-                            <button className={'btn btn-outline-danger btn-lg rounded-1 mb-xs-0 mb-2'}>Lihat Promo!
+                            <button
+                                className={'btn btn-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s'}
+                                onClick={() => navigate("/kelas")}>Lihat Kelas
+                            </button>
+                            <button
+                                className={'btn btn-outline-danger btn-lg rounded-1 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s'}>Lihat
+                                Promo!
                             </button>
                         </Col>
                         <Col lg={'6'} className={'pt-lg-0 pt-6'}>
-                            <img src={HeroImage} alt="hero-img"/>
+                            <img src={HeroImage} alt="hero-img" className={"animate__animated animate__fadeInUp"}/>
                         </Col>
                     </Row>
                 </Container>
@@ -47,7 +54,7 @@ const HomePage = () => {
                     </Row>
                     <Row>
                         {kelasTerbaru.map((kelas => {
-                            return <Col key={kelas.id} className={"shadow"}>
+                            return <Col key={kelas.id} className={"shadow rounded"} data-aos={"fade-up"} data-aos-duration={"1000"} data-aos-delay={kelas.delay}>
                                 <img src={kelas.image} alt="unsplash.com" className={"w-100 mb-5 rounded-top"}/>
                                 <div className={"star mb-2 px-3"}>
                                     <i className={kelas.star1}></i>
@@ -66,7 +73,7 @@ const HomePage = () => {
                     </Row>
                     <Row>
                         <Col className={"text-center"}>
-                            <button className={"btn btn-success rounded-5 btn-lg"}
+                            <button className={"btn btn-success rounded-5 btn-lg"} data-aos={"fade-up"} data-aos-duration={"1000"}
                                     onClick={() => navigate("/kelas")}>Lihat Semua Kelas
                                 <i className={'fa-solid fa-chevron-right ms-1'}></i></button>
                         </Col>
@@ -107,7 +114,7 @@ const HomePage = () => {
                                             </div>
                                         </div>
                                     </SwiperSlide>
-                            )
+                                )
                             })}
                         </Swiper>
                     </Row>

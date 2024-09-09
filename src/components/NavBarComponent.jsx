@@ -17,7 +17,7 @@ const NavBarComponent = () => {
     return <div>
         <Navbar expand="lg" className={changeColor ? "color-active": ""} expanded={expanded}>
             <Container>
-                <Navbar.Brand href="#home" className={"fs-3 fw-bold"}>Ngoding ReactJS</Navbar.Brand>
+                <Navbar.Brand href="/" className={"fs-3 fw-bold"}>Ngoding ReactJS.</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto text-center">
